@@ -1,0 +1,15 @@
+<h1>Simple Flat</h1>
+<div id="Flats">
+<ul>
+  <% @flats.each do |flat| %>
+    <%= flat.name %>
+    <i class="fa-solid fa-user-group"></i> <%= flat.number_of_guests  %>
+    <i class="fa-solid fa-euro-sign"></i> <%= flat.price_per_night  %>
+    <p>
+      <%= link_to "Show this flat", flat %>
+    </p>
+  <% end %>
+  </ul>
+</div>
+
+<%= link_to "New flat", new_flat_path %>
